@@ -1,0 +1,23 @@
+.subjectCard-container {
+  height: 400px;
+  width: 525px;
+  border: 2px solid rgb(227, 227, 227);
+  padding: 10px;
+  border-radius: 5px;
+
+  .subjectName {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    background: #e7f1ff;
+    padding: 10px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+    .book {
+      margin-right: 10px;
+    }
+  }
+}

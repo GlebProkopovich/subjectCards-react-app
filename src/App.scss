@@ -1,0 +1,9 @@
+.app-container {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin: 100px auto;
+  padding: 0 50px;
+}
