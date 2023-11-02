@@ -1,7 +1,5 @@
 .subjectCard-container {
-  height: 400px;
-  width: 525px;
-  border: 2px solid rgb(227, 227, 227);
+  border: 2px solid rgb(238, 238, 238);
   padding: 10px;
   border-radius: 5px;
 
@@ -10,6 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 15px;
     font-weight: 600;
     background: #e7f1ff;
     padding: 10px;

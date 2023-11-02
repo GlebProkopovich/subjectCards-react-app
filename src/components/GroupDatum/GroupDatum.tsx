@@ -4,7 +4,7 @@ import './GroupDatum.scss';
 
 const GroupDatum: FC<IGroupDatumProps> = ({ groupField, groupValue }) => {
   return (
-    <div className="groupDatum">
+    <div className="groupDatum-container">
       <p className="groupField">{groupField}</p>
       <p className="groupValue">{groupValue}</p>
     </div>

@@ -1,14 +1,27 @@
 import GroupDatum from '../GroupDatum/GroupDatum';
 import { FC } from 'react';
+import { IGroupInfoProps } from '../../types';
 import './GroupInfo.scss';
 
-const GroupInfo: FC = () => {
+const GroupInfo: FC<IGroupInfoProps> = ({
+  groupName,
+  studentsNumber,
+  course,
+  semestr,
+}) => {
   return (
     <div className="groupInfo-container">
-      <GroupDatum groupField="Группа" groupValue="201" />
-      <GroupDatum groupField="Количество курсантов" groupValue="201" />
-      <GroupDatum groupField="Курс" groupValue="201" />
-      <GroupDatum groupField="Семестр" groupValue="201" />
+      <div className="groupCourseWrapper">
+        <GroupDatum groupField="Группа" groupValue={groupName} />
+        <GroupDatum groupField="Курс" groupValue={course} />
+      </div>
+      <div className="studentsSemestrWrapper">
+        <GroupDatum
+          groupField="Количество курсантов"
+          groupValue={studentsNumber}
+        />
+        <GroupDatum groupField="Семестр" groupValue={semestr} />
+      </div>
     </div>
   );
 };

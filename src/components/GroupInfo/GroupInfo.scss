@@ -1,0 +1,14 @@
+.groupInfo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 5px 0 15px;
+
+  .groupCourseWrapper {
+    display: flex;
+  }
+
+  .studentsSemestrWrapper {
+    display: flex;
+  }
+}

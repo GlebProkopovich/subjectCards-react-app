@@ -18,6 +18,7 @@ export interface ISubject {
   exam: boolean;
   groupName: string;
   laboratoryHours: string;
+  lecturesHours: string;
   offset: boolean;
   podgroups: IPodgroup[];
   practicHours: string;
@@ -50,11 +51,31 @@ export interface ISubjectCardData {
 
 export interface ISubjectCardProps {
   subjectName: string;
+  groupName: string;
+  studentsNumber: string;
+  course: string;
+  semestr: string;
+  uniqueId: string;
 }
 
 export interface IGroupDatumProps {
   groupField: string;
   groupValue: string;
+}
+
+export interface IGroupInfoProps {
+  groupName: string;
+  studentsNumber: string;
+  course: string;
+  semestr: string;
+}
+
+export interface ITableProps {
+  uniqueId: string;
+}
+
+export interface IRowProps {
+  uniqueId: string;
 }
 
 export interface ISubjectCardDataState {

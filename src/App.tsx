@@ -31,6 +31,11 @@ const App: FC = () => {
         ? subjectCardsData?.map((subject: ISubject) => (
             <SubjectCard
               subjectName={subject.subjectName}
+              groupName={subject.groupName}
+              studentsNumber={subject.studentsNumber}
+              course={subject.course}
+              semestr={subject.semestr}
+              uniqueId={subject.uniqueId}
               key={subject.uniqueId}
             />
           ))
