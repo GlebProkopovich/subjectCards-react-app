@@ -2,6 +2,7 @@
   border: 2px solid rgb(238, 238, 238);
   padding: 10px;
   border-radius: 5px;
+  align-self: flex-start;
 
   .subjectName {
     width: 100%;
@@ -17,6 +18,30 @@
 
     .book {
       margin-right: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .subjectCard-container {
+    .subjectName {
+      font-size: 10px;
+
+      .book {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .subjectCard-container {
+    .subjectName {
+      font-size: 8px;
+
+      .book {
+        font-size: 12px;
+      }
     }
   }
 }

@@ -1,9 +1,58 @@
 .app-container {
-  max-width: 1200px;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 50px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
   margin: 100px auto;
   padding: 0 50px;
+
+  .subjectCards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  .saveBtn {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #198754;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #12643e;
+    }
+
+    &:active {
+      background: #198754;
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .app-container {
+    .saveBtn {
+      width: 70px;
+      height: 30px;
+      font-size: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .app-container {
+    .saveBtn {
+      width: 70px;
+      height: 30px;
+      font-size: 8px;
+    }
+  }
 }

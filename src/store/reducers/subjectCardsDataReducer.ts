@@ -1,4 +1,8 @@
-import { GetSubjectDataType, ISubjectCardDataReducer } from '../../types';
+import {
+  GetSubjectDataType,
+  ISubject,
+  ISubjectCardDataReducer,
+} from '../../types';
 
 const initialState: ISubjectCardDataReducer = {
   data: null,
@@ -22,6 +26,21 @@ const subjectCardsDataReducer = (
         data: null,
         error: action.payload,
       };
+    case 'UPDATE_SUBJECT_CARDS':
+      const updatedSubjectCard = action.payload;
+      if (Array.isArray(state.data)) {
+        const updatedSubjectCards = state.data.map((subject: ISubject) =>
+          subject.uniqueId === updatedSubjectCard.uniqueId
+            ? updatedSubjectCard
+            : subject
+        );
+        return {
+          ...state,
+          data: updatedSubjectCards,
+        };
+      } else {
+        return state;
+      }
     default:
       return state;
   }

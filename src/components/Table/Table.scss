@@ -10,9 +10,116 @@ table {
     font-size: 13px;
     font-weight: 500;
     border-bottom: 2px solid #303a65;
+
+    tr {
+      th {
+        border: 1px solid rgb(238, 238, 238);
+        padding: 0 10px;
+      }
+      .teacherAndBtnWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .divideIntoPodgroupsBtn {
+          font-size: 18px;
+          background: none;
+          border: none;
+          margin-left: 5px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            transform: scale(140%);
+          }
+
+          &:active {
+            transform: scale(100%);
+          }
+        }
+      }
+
+      .podgroupAndBtnWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .deletePodgroupBtn {
+          background: none;
+          border: none;
+          margin-left: 5px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            transform: scale(120%);
+          }
+
+          &:active {
+            transform: scale(100%);
+          }
+
+          span {
+            font-size: 18px;
+          }
+        }
+      }
+    }
   }
 
   tbody {
     background: #f5fdff;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  table {
+    thead {
+      font-size: 10px;
+
+      tr {
+        th {
+          padding: 0 3px;
+        }
+        .teacherAndBtnWrapper {
+          .divideIntoPodgroupsBtn {
+            font-size: 15px;
+          }
+        }
+        .podgroupAndBtnWrapper {
+          .deletePodgroupBtn {
+            span {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 310px) {
+  table {
+    thead {
+      font-size: 8px;
+
+      tr {
+        th {
+          padding: 0 2px;
+        }
+        .teacherAndBtnWrapper {
+          .divideIntoPodgroupsBtn {
+            font-size: 12px;
+          }
+        }
+        .podgroupAndBtnWrapper {
+          .deletePodgroupBtn {
+            span {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
   }
 }

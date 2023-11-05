@@ -1,15 +1,6 @@
 const GET_DATA_SUCCESS = 'GET_DATA_SUCCESS';
 const GET_DATA_FAILURE = 'GET_DATA_FAILURE';
-
-interface IGetDataSuccessAction {
-  type: typeof GET_DATA_SUCCESS;
-  payload: IGetSubjectCardsDataAction;
-}
-
-interface IGetDataFailureAction {
-  type: typeof GET_DATA_FAILURE;
-  payload: Error;
-}
+const UPDATE_SUBJECT_CARDS = 'UPDATE_SUBJECT_CARDS';
 
 export interface ISubject {
   additionalInfo: string;
@@ -74,8 +65,17 @@ export interface ITableProps {
   uniqueId: string;
 }
 
-export interface IRowProps {
+export interface IRowsProps {
   uniqueId: string;
+  secondPodgroup: boolean;
+}
+
+export interface IModalProps {
+  text: string;
+  iconTitle: string;
+  iconStyles?: Object;
+  btnStyles?: Object;
+  closeModal: () => void;
 }
 
 export interface ISubjectCardDataState {
@@ -87,7 +87,22 @@ export interface ISubjectCardDataState {
 }
 
 export interface IGetSubjectCardsDataAction {
-  type: 'GET_DATA_SUCCESS' | 'GET_DATA_FAILURE';
+  type: 'GET_DATA_SUCCESS' | 'GET_DATA_FAILURE' | 'UPDATE_SUBJECT_CARDS';
+  payload: any;
+}
+
+interface IGetDataSuccessAction {
+  type: typeof GET_DATA_SUCCESS;
+  payload: IGetSubjectCardsDataAction;
+}
+
+interface IGetDataFailureAction {
+  type: typeof GET_DATA_FAILURE;
+  payload: Error;
+}
+
+interface IUpdateSubjectCards {
+  type: typeof UPDATE_SUBJECT_CARDS;
   payload: any;
 }
 
@@ -96,4 +111,7 @@ export interface ISubjectCardDataReducer {
   error: string | null;
 }
 
-export type GetSubjectDataType = IGetDataSuccessAction | IGetDataFailureAction;
+export type GetSubjectDataType =
+  | IGetDataSuccessAction
+  | IGetDataFailureAction
+  | IUpdateSubjectCards;
